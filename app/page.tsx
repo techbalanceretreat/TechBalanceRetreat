@@ -122,7 +122,7 @@ export default function Page() {
             <h3 className="text-lg font-semibold tracking-tight">Attendees</h3>
             <p className="mt-3 text-sm leading-relaxed text-[#D9D6CF]">Email us for the overview, dates, and next steps.</p>
             <div className="mt-6">
-              <a href="mailto:hello@techbalanceretreat.com?subject=Request%20Invite"
+              <a href="mailto:info@techbalanceretreat.com?subject=Request%20Invite"
                  className="inline-flex items-center justify-center rounded-full bg-[#F6F4EF] px-5 py-2.5 text-sm font-semibold text-[#0B0F14] transition hover:opacity-90">
                 Request Invite
               </a>
@@ -133,7 +133,7 @@ export default function Page() {
             <h3 className="text-lg font-semibold tracking-tight">Venue Partners</h3>
             <p className="mt-3 text-sm leading-relaxed text-[#D9D6CF]">Send your property link + availability window.</p>
             <div className="mt-6">
-              <a href="mailto:hello@techbalanceretreat.com?subject=Venue%20Partner%20Inquiry"
+              <a href="mailto:info@techbalanceretreat.com?subject=Venue%20Partner%20Inquiry"
                  className="inline-flex items-center justify-center rounded-full bg-[#F6F4EF] px-5 py-2.5 text-sm font-semibold text-[#0B0F14] transition hover:opacity-90">
                 Venue Inquiry
               </a>
@@ -145,8 +145,8 @@ export default function Page() {
       <footer className="border-t border-[rgba(246,244,239,0.10)]">
         <div className="mx-auto flex max-w-[1120px] flex-col gap-4 px-6 py-10 md:flex-row md:items-center md:justify-between">
           <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">TechBalance Retreat</p>
-          <a className="text-sm text-[#D9D6CF] hover:text-[#F6F4EF]" href="mailto:hello@techbalanceretreat.com">
-            hello@techbalanceretreat.com
+          <a className="text-sm text-[#D9D6CF] hover:text-[#F6F4EF]" href="mailto:info@techbalanceretreat.com">
+            info@techbalanceretreat.com
           </a>
         </div>
       </footer>
