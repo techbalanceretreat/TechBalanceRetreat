@@ -31,13 +31,14 @@ export default function Page() {
       <header className="sticky top-0 z-50 border-b border-[rgba(246,244,239,0.10)] bg-[#0B0F14]/75 backdrop-blur">
         <div className="mx-auto flex max-w-[1120px] items-center justify-between px-6 py-4">
           {/* Logo */}
-          <a href="#" className="flex items-center">
-            <Image
-              src="/techbalance-logo.png"
+          <a href="#" className="flex items-center gap-3">
+  <img
+    src="/techbalance-logo.png"
     alt="TechBalance"
-    className="h-7 w-auto"
-            />
-          </a>
+    style={{ height: 28 }}
+  />
+</a>
+
 
           <nav className="hidden items-center gap-7 text-sm text-[#D9D6CF] md:flex">
             <a className="hover:text-[#F6F4EF] transition" href="#about">
