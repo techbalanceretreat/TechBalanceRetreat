@@ -1,40 +1,56 @@
+// app/page.tsx
+
 export default function Page() {
   return (
-    <main className="min-h-screen bg-[#0B0F14] text-[#F6F4EF] relative overflow-hidden">
-      {/* subtle light accents + grid lines */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.10]">
-        {/* soft top glow */}
-        <div className="absolute -top-40 left-1/2 h-[520px] w-[900px] -translate-x-1/2 rounded-full bg-[#F6F4EF] blur-[140px]" />
-        {/* soft left glow */}
-        <div className="absolute top-[25%] -left-40 h-[420px] w-[420px] rounded-full bg-[#F6F4EF] blur-[140px]" />
+    <main className="min-h-screen bg-[#0B0F14] text-[#F6F4EF] selection:bg-[#F6F4EF] selection:text-[#0B0F14]">
+      {/* Subtle grid + top glow (adds lightness + meticulous lines) */}
+      <div className="pointer-events-none fixed inset-0 -z-10">
+        {/* soft glow */}
+        <div className="absolute -top-40 left-1/2 h-[520px] w-[900px] -translate-x-1/2 rounded-full bg-[rgba(246,244,239,0.08)] blur-3xl" />
         {/* grid */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 opacity-[0.10]"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(246,244,239,0.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(246,244,239,0.12) 1px, transparent 1px)",
-            backgroundSize: "96px 96px",
+              "linear-gradient(to right, rgba(246,244,239,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(246,244,239,0.08) 1px, transparent 1px)",
+            backgroundSize: "80px 80px",
+          }}
+        />
+        {/* subtle horizontal lines */}
+        <div
+          className="absolute inset-0 opacity-[0.12]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(246,244,239,0.10) 1px, transparent 1px)",
+            backgroundSize: "100% 160px",
           }}
         />
       </div>
 
       <header className="sticky top-0 z-50 border-b border-[rgba(246,244,239,0.10)] bg-[#0B0F14]/75 backdrop-blur">
         <div className="mx-auto flex max-w-[1120px] items-center justify-between px-6 py-4">
-          {/* LOGO */}
+          {/* Logo */}
           <a href="#" className="flex items-center gap-3">
             <img
               src="/logo/techbalance-logo.png"
               alt="TechBalance"
-              className="h-6 w-auto"
-              loading="eager"
+              className="h-7 w-auto"
             />
           </a>
 
           <nav className="hidden items-center gap-7 text-sm text-[#D9D6CF] md:flex">
-            <a className="hover:text-[#F6F4EF]" href="#about">About</a>
-            <a className="hover:text-[#F6F4EF]" href="#experience">Experience</a>
-            <a className="hover:text-[#F6F4EF]" href="#faq">FAQ</a>
-            <a className="hover:text-[#F6F4EF]" href="#contact">Contact</a>
+            <a className="hover:text-[#F6F4EF] transition" href="#about">
+              About
+            </a>
+            <a className="hover:text-[#F6F4EF] transition" href="#experience">
+              Experience
+            </a>
+            <a className="hover:text-[#F6F4EF] transition" href="#faq">
+              FAQ
+            </a>
+            <a className="hover:text-[#F6F4EF] transition" href="#contact">
+              Contact
+            </a>
           </nav>
 
           <a
@@ -47,21 +63,22 @@ export default function Page() {
       </header>
 
       {/* HERO */}
-      <section className="mx-auto max-w-[1120px] px-6 pb-16 pt-14 md:pb-24 md:pt-20 relative">
-        {/* thin divider line */}
-        <div className="absolute left-6 right-6 top-0 h-px bg-[rgba(246,244,239,0.10)]" />
-
-        <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">
-          TechBalance Retreat
-        </p>
+      <section className="mx-auto max-w-[1120px] px-6 pb-16 pt-14 md:pb-24 md:pt-20">
+        <div className="flex items-center gap-3">
+          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">
+            TechBalance Retreat
+          </p>
+          <span className="hidden md:block h-px w-32 bg-[rgba(246,244,239,0.16)]" />
+        </div>
 
         <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
           Quiet luxury for high-output minds.
         </h1>
 
-        <p className="mt-5 max-w-[58ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
-          A curated retreat for technology professionals—designed for clarity, connection, and pace.
-          Private accommodations, structured sessions, and real recovery.
+        <p className="mt-5 max-w-[62ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
+          A curated retreat for technology professionals—designed for clarity,
+          connection, and pace. Private accommodations, structured moments, and
+          real recovery.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -80,74 +97,97 @@ export default function Page() {
           </a>
         </div>
 
-        {/* bottom divider line */}
-        <div className="mt-14 h-px bg-[rgba(246,244,239,0.10)]" />
+        {/* divider line */}
+        <div className="mt-14 h-px w-full bg-[rgba(246,244,239,0.10)]" />
       </section>
 
       {/* ABOUT */}
       <section id="about" className="mx-auto max-w-[1120px] px-6 py-14 md:py-20">
-        <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">About</p>
+        <div className="flex items-center gap-3">
+          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">About</p>
+          <span className="hidden md:block h-px w-20 bg-[rgba(246,244,239,0.16)]" />
+        </div>
+
         <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">
           Designed for the people who build systems.
         </h2>
+
+        <p className="mt-4 max-w-[70ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
+          TechBalance is a premium retreat experience for tech professionals who
+          want to slow down, reconnect, and return with a clear mind—without losing momentum.
+        </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {[
             ["Quiet luxury", "A premium environment that supports focus, ease, and true rest."],
             ["Curated community", "A room full of tech professionals you’ll actually enjoy being around."],
-            ["A better pace", "Clear flow across the day—space to connect, reset, and return refreshed."]
+            ["A better pace", "Clear flow across the day—space to connect, reset, and return refreshed."],
           ].map(([t, d]) => (
             <div
               key={t}
-              className="rounded-2xl border border-[rgba(246,244,239,0.14)] bg-[rgba(246,244,239,0.035)] p-6"
+              className="rounded-2xl border border-[rgba(246,244,239,0.14)] bg-[rgba(246,244,239,0.04)] p-6 shadow-[0_0_0_1px_rgba(246,244,239,0.03)]"
             >
               <h3 className="text-base font-semibold">{t}</h3>
+              <div className="mt-3 h-px w-10 bg-[rgba(246,244,239,0.18)]" />
               <p className="mt-3 text-sm leading-relaxed text-[#D9D6CF]">{d}</p>
             </div>
           ))}
         </div>
+
+        <div className="mt-16 h-px w-full bg-[rgba(246,244,239,0.10)]" />
       </section>
 
       {/* EXPERIENCE */}
       <section id="experience" className="mx-auto max-w-[1120px] px-6 py-14 md:py-20">
-        <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">Experience</p>
+        <div className="flex items-center gap-3">
+          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">Experience</p>
+          <span className="hidden md:block h-px w-24 bg-[rgba(246,244,239,0.16)]" />
+        </div>
+
         <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">
-          Everything you need, in one place.
+          A meticulous retreat—without the rigid vibe.
         </h2>
+
+        <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
+          TechBalance is designed for real connection: shared meals, movement, meaningful conversation,
+          and a calm schedule that still feels intentional.
+        </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-4">
           {[
-            ["All-inclusive", "Stay, meals, and essentials—curated as one seamless experience."],
-            ["Well-deserved downtime", "Built-in recovery: movement, stillness, and real rest."],
-            ["Communal", "Shared meals and moments that make connection feel natural."],
-            ["Intentional flow", "A clear rhythm to the day—so you can settle in and fully enjoy it."]
+            ["All-inclusive", "Lodging, meals, and essentials—so you can fully settle in."],
+            ["Well-deserved downtime", "Unplug, exhale, and return sharper—without guilt."],
+            ["Communal", "Breakfasts, roundtable meals, and shared moments that build real relationships."],
+            ["Intentional flow", "A clear daily rhythm—enough structure to feel held, enough space to breathe."],
           ].map(([t, d]) => (
             <div
               key={t}
-              className="rounded-2xl border border-[rgba(246,244,239,0.14)] bg-[rgba(246,244,239,0.035)] p-6"
+              className="rounded-2xl border border-[rgba(246,244,239,0.14)] bg-[rgba(246,244,239,0.03)] p-6"
             >
               <h3 className="text-base font-semibold">{t}</h3>
               <p className="mt-3 text-sm leading-relaxed text-[#D9D6CF]">{d}</p>
             </div>
           ))}
         </div>
+
+        <div className="mt-16 h-px w-full bg-[rgba(246,244,239,0.10)]" />
       </section>
 
       {/* FAQ */}
       <section id="faq" className="mx-auto max-w-[1120px] px-6 py-14 md:py-20">
-        <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">FAQ</p>
-        <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">Quick answers.</h2>
+        <div className="flex items-center gap-3">
+          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">FAQ</p>
+          <span className="hidden md:block h-px w-16 bg-[rgba(246,244,239,0.16)]" />
+        </div>
+
+        <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">
+          Quick answers.
+        </h2>
 
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {[
-            [
-              "Is pricing all-inclusive?",
-              "Your ticket includes stay, meals, and retreat essentials. Travel is not included. Taxes/fees may vary by venue."
-            ],
-            [
-              "Can I bring a plus one?",
-              "Yes. Plus ones share a room/bed with an attendee. Separate rooms require a full attendee ticket."
-            ]
+            ["Is pricing all-inclusive?", "Stay + food + essentials. Taxes/fees may vary by venue."],
+            ["Can I bring a plus one?", "Yes. Plus ones share a room/bed with an attendee. Separate rooms require an attendee ticket."],
           ].map(([q, a]) => (
             <div key={q} className="rounded-2xl border border-[rgba(246,244,239,0.14)] p-6 bg-[rgba(246,244,239,0.02)]">
               <h3 className="text-sm font-semibold">{q}</h3>
@@ -155,19 +195,28 @@ export default function Page() {
             </div>
           ))}
         </div>
+
+        <div className="mt-16 h-px w-full bg-[rgba(246,244,239,0.10)]" />
       </section>
 
       {/* CONTACT */}
       <section id="contact" className="mx-auto max-w-[1120px] px-6 py-14 md:py-20">
-        <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">Contact</p>
-        <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">Request an invite.</h2>
+        <div className="flex items-center gap-3">
+          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">Contact</p>
+          <span className="hidden md:block h-px w-24 bg-[rgba(246,244,239,0.16)]" />
+        </div>
 
-        <div className="mt-8">
-          <div className="rounded-2xl border border-[rgba(246,244,239,0.14)] bg-[rgba(246,244,239,0.035)] p-6">
+        <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">
+          Request an invite.
+        </h2>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-1">
+          <div className="rounded-2xl border border-[rgba(246,244,239,0.14)] bg-[rgba(246,244,239,0.04)] p-6">
             <h3 className="text-lg font-semibold tracking-tight">Attendees</h3>
             <p className="mt-3 text-sm leading-relaxed text-[#D9D6CF]">
               Email us for the overview, dates, and next steps.
             </p>
+
             <div className="mt-6">
               <a
                 href="mailto:info@techbalanceretreat.com?subject=Request%20Invite"
@@ -176,14 +225,23 @@ export default function Page() {
                 Request Invite
               </a>
             </div>
+
+            <p className="mt-4 text-xs text-[#D9D6CF]">
+              Tip: include your city, role, and whether you’re interested in bringing a plus one.
+            </p>
           </div>
         </div>
       </section>
 
       <footer className="border-t border-[rgba(246,244,239,0.10)]">
         <div className="mx-auto flex max-w-[1120px] flex-col gap-4 px-6 py-10 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">TechBalance Retreat</p>
-          <a className="text-sm text-[#D9D6CF] hover:text-[#F6F4EF]" href="mailto:info@techbalanceretreat.com">
+          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">
+            TechBalance Retreat
+          </p>
+          <a
+            className="text-sm text-[#D9D6CF] hover:text-[#F6F4EF] transition"
+            href="mailto:info@techbalanceretreat.com"
+          >
             info@techbalanceretreat.com
           </a>
         </div>
