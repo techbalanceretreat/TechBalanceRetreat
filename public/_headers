@@ -2,3 +2,16 @@
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
+
+{/* Logo */}
+<a href="#" className="flex items-center gap-3">
+  <img
+    src="/techbalance-logo-white.png"
+    alt="TechBalance"
+    className="h-10 md:h-12 w-auto"
+    style={{
+      filter: "brightness(1.35) contrast(1.1)", // makes dark letters readable on dark bg
+    }}
+  />
+</a>
+
