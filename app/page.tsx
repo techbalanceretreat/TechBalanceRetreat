@@ -33,12 +33,9 @@ export default function Page() {
           {/* Logo */}
           <a href="#" className="flex items-center">
             <Image
-              src="/logo/techbalance-logo.png"
-              alt="TechBalance"
-              width={190}
-              height={34}
-              priority
-              className="h-7 w-auto opacity-95"
+              src="/techbalance-logo.png"
+    alt="TechBalance"
+    className="h-7 w-auto"
             />
           </a>
 
