@@ -1,4 +1,5 @@
 // app/page.tsx
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -30,11 +31,14 @@ export default function Page() {
       <header className="sticky top-0 z-50 border-b border-[rgba(246,244,239,0.10)] bg-[#0B0F14]/75 backdrop-blur">
         <div className="mx-auto flex max-w-[1120px] items-center justify-between px-6 py-4">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <img
+          <a href="#" className="flex items-center">
+            <Image
               src="/logo/techbalance-logo.png"
               alt="TechBalance"
-              className="h-7 w-auto"
+              width={190}
+              height={34}
+              priority
+              className="h-7 w-auto opacity-95"
             />
           </a>
 
@@ -97,14 +101,15 @@ export default function Page() {
           </a>
         </div>
 
-        {/* divider line */}
         <div className="mt-14 h-px w-full bg-[rgba(246,244,239,0.10)]" />
       </section>
 
       {/* ABOUT */}
       <section id="about" className="mx-auto max-w-[1120px] px-6 py-14 md:py-20">
         <div className="flex items-center gap-3">
-          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">About</p>
+          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">
+            About
+          </p>
           <span className="hidden md:block h-px w-20 bg-[rgba(246,244,239,0.16)]" />
         </div>
 
@@ -140,7 +145,9 @@ export default function Page() {
       {/* EXPERIENCE */}
       <section id="experience" className="mx-auto max-w-[1120px] px-6 py-14 md:py-20">
         <div className="flex items-center gap-3">
-          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">Experience</p>
+          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">
+            Experience
+          </p>
           <span className="hidden md:block h-px w-24 bg-[rgba(246,244,239,0.16)]" />
         </div>
 
@@ -149,8 +156,8 @@ export default function Page() {
         </h2>
 
         <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
-          TechBalance is designed for real connection: shared meals, movement, meaningful conversation,
-          and a calm schedule that still feels intentional.
+          TechBalance is designed for real connection: shared meals, movement,
+          meaningful conversation, and a calm schedule that still feels intentional.
         </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-4">
@@ -189,7 +196,10 @@ export default function Page() {
             ["Is pricing all-inclusive?", "Stay + food + essentials. Taxes/fees may vary by venue."],
             ["Can I bring a plus one?", "Yes. Plus ones share a room/bed with an attendee. Separate rooms require an attendee ticket."],
           ].map(([q, a]) => (
-            <div key={q} className="rounded-2xl border border-[rgba(246,244,239,0.14)] p-6 bg-[rgba(246,244,239,0.02)]">
+            <div
+              key={q}
+              className="rounded-2xl border border-[rgba(246,244,239,0.14)] p-6 bg-[rgba(246,244,239,0.02)]"
+            >
               <h3 className="text-sm font-semibold">{q}</h3>
               <p className="mt-3 text-sm leading-relaxed text-[#D9D6CF]">{a}</p>
             </div>
@@ -202,7 +212,9 @@ export default function Page() {
       {/* CONTACT */}
       <section id="contact" className="mx-auto max-w-[1120px] px-6 py-14 md:py-20">
         <div className="flex items-center gap-3">
-          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">Contact</p>
+          <p className="text-xs uppercase tracking-[0.22em] text-[#D9D6CF]">
+            Contact
+          </p>
           <span className="hidden md:block h-px w-24 bg-[rgba(246,244,239,0.16)]" />
         </div>
 
