@@ -226,7 +226,7 @@ export default function Page() {
             ],
             [
               "Can I bring a plus one?",
-              "Yes. Plus ones share a room or bed with an attendee. Separate rooms require an attendee ticket.",
+              "Yes. Discounted tickets will be available for plus ones who share a room or bed with an attendee. Separate rooms require an full priced attendee ticket.",
             ],
             [
               "When is the upcoming retreat and where will it be?",
