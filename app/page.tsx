@@ -41,7 +41,7 @@ export default function Page() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
             <img
-              src="/techbalance-logo-bigger-white.png"
+              src="/techbalance-logo-white.png"
               alt="TechBalance"
               className="h-10 md:h-12 w-auto opacity-95"
               style={{
