@@ -43,7 +43,7 @@ export default function Page() {
             <img
               src="/techbalance-logo-white.png"
               alt="TechBalance"
-              className="h-12 md:h-16 lg:h-18 w-auto opacity-100"
+              className="h-10 md:h-16 lg:h-16 w-auto opacity-100"
               style={{
                 filter: "brightness(1.35) contrast(1.1)",
               }}
@@ -65,12 +65,19 @@ export default function Page() {
             </a>
           </nav>
 
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center rounded-full bg-[#F6F4EF] px-5 py-2.5 text-sm font-semibold text-[#0B0F14] transition hover:opacity-90"
-          >
-            Request Invite
-          </a>
+        <a
+  href="#contact"
+  className="
+    inline-flex items-center justify-center rounded-full
+    bg-[#F6F4EF] text-[#0B0F14] font-semibold
+    px-4 py-2 text-sm
+    md:px-5 md:py-2.5
+    transition hover:opacity-90
+  "
+>
+  Request Invite
+</a>
+
         </div>
       </header>
 
