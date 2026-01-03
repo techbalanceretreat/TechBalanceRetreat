@@ -131,11 +131,15 @@ export default function Page() {
           A retreat designed for balance.
         </h2>
 
-        <p className="mt-4 max-w-[70ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
-          TechBalance is a premium retreat experience for professionals who want
-          to slow down, reconnect, and return with a clear mind without losing
-          momentum.
-        </p>
+        <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
+  TechBalance is a free-range retreat for adults with mentally taxing
+  roles who need time to truly unplug and recharge.
+</p>
+
+<p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
+  The retreat is about enjoying the fruits of your labor and resting, to continue showing up as your best self.
+</p>
+
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {[
@@ -180,10 +184,17 @@ export default function Page() {
         </h2>
 
         <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
-          This retreat is time off, done right. Imagine waking up well rested to
-          breakfast, taking your time, lounging, enjoying lunch, joining in on
-          activities throughout the day, and ending the night with dinner and
+          Imagine time off, done right. Wake up well rested to
+          breakfast, take your time throughout the day, lounge, enjoy lunch, join in on
+          activities throughout the day, and end the night with dinner and
           good conversation.
+        </p>
+
+        <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
+        The experience includes one to two thoughtfully structured activities each day,
+  designed to help you unwind and support wellbeing both during the retreat and
+  long after it ends. The rest of your time is intentionally open, allowing you
+  to move at your own pace.
         </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -239,6 +250,11 @@ export default function Page() {
               "When is the upcoming retreat and where will it be?",
               "October 9–12. The location and venue will be shared with the email list first once attendee count is confirmed and the best-fit venue is secured.",
             ],
+      [
+  "How much will the retreat cost?",
+  "Pricing is expected to fall between $1,500 and $2,000 for attendees and , depending on final venue and accommodations."
+],
+
           ].map(([q, a]) => (
             <div
               key={q}
