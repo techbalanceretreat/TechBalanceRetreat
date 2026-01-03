@@ -252,7 +252,7 @@ export default function Page() {
             ],
       [
   "How much will the retreat cost?",
-  "Pricing is expected to fall between $1,500 and $2,000 for attendees and , depending on final venue and accommodations."
+  "Pricing is expected to fall between $1,500 and $2,000 for attendees and for plus ones around $850, depending on final venue and accommodations."
 ],
 
           ].map(([q, a]) => (
