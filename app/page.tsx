@@ -43,7 +43,7 @@ export default function Page() {
             <img
               src="/techbalance-logo-white.png"
               alt="TechBalance"
-              className="h-14 md:h-16 lg:h-18 w-auto opacity-100"
+              className="h-12 md:h-16 lg:h-18 w-auto opacity-100"
               style={{
                 filter: "brightness(1.35) contrast(1.1)",
               }}
