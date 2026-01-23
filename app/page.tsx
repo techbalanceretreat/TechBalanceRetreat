@@ -4,10 +4,10 @@ export default function Page() {
   const mailtoHref =
     "mailto:info@techbalanceretreat.com" +
     "?subject=" +
-    encodeURIComponent("TechBalance Details") +
+    encodeURIComponent("Invitation Inquiry - TechBalance") +
     "&body=" +
     encodeURIComponent(
-      "Hi TechBalance team,\n\nMy name is ____ and I am simply a human working as a (job title) ____ who needs a well-deserved break to recharge.\n\nLooking forward to getting more information on the retreat.\n\nThank you,\n____"
+      "Hi TechBalance team,\n\nMy name is ____ and I work as a ____ (job title).\n\nLinkedIn Profile: ____\n\nI'm interested in TechBalance because:\n____\n\nLooking forward to hearing from you.\n\nThank you,\n____"
     );
 
   return (
@@ -95,8 +95,7 @@ export default function Page() {
         </h1>
 
         <p className="mt-5 max-w-[62ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
-          Space for the modern-day technology professional to pause, reset, and
-          restore balance.
+          A retreat for technology professionals to pause, reset, and return with clarity.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -132,14 +131,12 @@ export default function Page() {
         </h2>
 
         <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
-  TechBalance is a free-range retreat for adults with mentally taxing
-  roles who need time to truly unplug and recharge.
-</p>
+          An intentional retreat for professionals carrying high cognitive load who need space to truly unplug and restore.
+        </p>
 
-<p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
-  The retreat is about enjoying the fruits of your labor and resting, to continue showing up as your best self.
-</p>
-
+        <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
+          The retreat is about honoring both your ambition and your need for rest—showing up as your best self, without pressure to perform.
+        </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {[
@@ -149,10 +146,10 @@ export default function Page() {
             ],
             [
               "Curated community",
-              "Attendees of this retreat are all in the same boat. Whether you are a social butterfly or not, you should be able to find someone to talk to or watch the sunset with.",
+              "Every attendee shares similar experiences—whether naturally social or not, you'll find peers to connect with authentically.",
             ],
             [
-              "A better pace",
+              "Intentional rhythm",
               "Clear flow across the day with space to connect, reset, and return refreshed.",
             ],
           ].map(([t, d]) => (
@@ -191,10 +188,10 @@ export default function Page() {
         </p>
 
         <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[#D9D6CF] md:text-base">
-        The experience includes one to two thoughtfully structured activities each day,
-  designed to help you unwind and support wellbeing both during the retreat and
-  long after it ends. The rest of your time is intentionally open, allowing you
-  to move at your own pace.
+          The experience includes one to two thoughtfully structured activities each day,
+          designed to help you unwind and support wellbeing both during the retreat and
+          long after it ends. The rest of your time is intentionally open, allowing you
+          to move at your own pace.
         </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -208,7 +205,7 @@ export default function Page() {
               "Breakfasts, roundtable meals, and shared moments that build real relationships.",
             ],
             [
-              "Intentional flow",
+              "Intentional rhythm",
               "A clear daily rhythm, enough structure to feel nurtured, enough space to breathe.",
             ],
           ].map(([t, d]) => (
@@ -250,11 +247,14 @@ export default function Page() {
               "When is the upcoming retreat and where will it be?",
               "October 9–12. The location and venue will be shared with the email list first once attendee count is confirmed and the best-fit venue is secured.",
             ],
-      [
-  "How much will the retreat cost?",
-  "Pricing is expected to fall between $1,500 and $2,000 for attendees and for plus ones around $850, depending on final venue and accommodations."
-],
-
+            [
+              "How much will the retreat cost?",
+              "Pricing is expected to fall between $1,800 and $2,000 for attendees and for plus ones around $850, depending on final venue and accommodations.",
+            ],
+            [
+              "How do I receive an invitation?",
+              "TechBalance operates on an invite-only basis to ensure community alignment and maintain the intimate nature of the experience. To receive an invitation, reach out to our team.",
+            ],
           ].map(([q, a]) => (
             <div
               key={q}
@@ -279,7 +279,7 @@ export default function Page() {
         </div>
 
         <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">
-          Request an invite.
+          Inquire About Invitations
         </h2>
 
         <div className="mt-8 grid gap-6 md:grid-cols-1">
@@ -288,7 +288,7 @@ export default function Page() {
               Interested in attending TechBalance?
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-[#D9D6CF]">
-              Email us to receive updates and retreat details.
+              To maintain the intimacy of the experience, TechBalance is invite-only. Space is intentionally limited. To be considered for an invitation, select the invitation inquiry button. If you have questions, reach out to info@techbalanceretreat.com.
             </p>
 
             <div className="mt-6">
@@ -296,7 +296,7 @@ export default function Page() {
                 href={mailtoHref}
                 className="inline-flex items-center justify-center rounded-full bg-[#F6F4EF] px-5 py-2.5 text-sm font-semibold text-[#0B0F14] transition hover:opacity-90"
               >
-                Request Invite
+                Invitation Inquiry
               </a>
             </div>
 
@@ -323,5 +323,3 @@ export default function Page() {
     </main>
   );
 }
-
-
