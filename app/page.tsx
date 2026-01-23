@@ -75,7 +75,7 @@ export default function Page() {
     transition hover:opacity-90
   "
 >
-  Request Invite
+  Invitation Inquiry
 </a>
 
         </div>
@@ -103,7 +103,7 @@ export default function Page() {
             href="#contact"
             className="inline-flex items-center justify-center rounded-full bg-[#F6F4EF] px-5 py-2.5 text-sm font-semibold text-[#0B0F14] transition hover:opacity-90"
           >
-            Request Invite
+            Invitation Inquiry
           </a>
 
           <a
