@@ -149,8 +149,8 @@ export default function Page() {
               "Every attendee shares similar experiences—whether naturally social or not, you'll find peers to connect with authentically.",
             ],
             [
-              "Intentional rhythm",
-              "Clear flow across the day with space to connect, reset, and return refreshed.",
+              "Invite-only",
+              "TechBalance operates on an invite-only basis to ensure community alignment and maintain the intimate nature of the experience.",
             ],
           ].map(([t, d]) => (
             <div
@@ -253,7 +253,7 @@ export default function Page() {
             ],
             [
               "How do I receive an invitation?",
-              "TechBalance operates on an invite-only basis to ensure community alignment and maintain the intimate nature of the experience. To receive an invitation, reach out to our team.",
+              "To receive an invitation, reach out to our team by selecting invitation inquiry in the contact section.",
             ],
           ].map(([q, a]) => (
             <div
