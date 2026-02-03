@@ -2,6 +2,8 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = "https://techbalanceretreat.com";
+
   return {
     rules: [
       {
@@ -9,7 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://techbalanceretreat.com/sitemap.xml",
-    host: "https://techbalanceretreat.com",
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
